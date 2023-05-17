@@ -1,0 +1,30 @@
+<wsdl:definitions name="CrudServiceImplService" targetNamespace="http://impl.test.tecnical.example.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.test.tecnical.example.com/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns3="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://deadman.ex/CrudService/wsdl">
+  <wsdl:import location="WSDL_-1950790956.wsdl" namespace="http://deadman.ex/CrudService/wsdl">
+    </wsdl:import>
+  <wsdl:binding name="CrudServiceImplServiceSoapBinding" type="ns1:CrudServicePort">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetTestData">
+      <soap12:operation soapAction="http://deadman.ex/CrudService/GetTestData" style="document"/>
+      <wsdl:input name="GetTestData">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetTestDataResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTestData">
+      <soap12:operation soapAction="http://deadman.ex/CrudService/SaveTestData" style="document"/>
+      <wsdl:input name="SaveTestData">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SaveTestDataResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CrudServiceImplService">
+    <wsdl:port binding="tns:CrudServiceImplServiceSoapBinding" name="CrudServiceImplPort">
+      <soap12:address location="http://localhost:8083/services/soap/CrudService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,41 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://deadman.ex/CrudService/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="GetTestDataRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="GetTestDataResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:int"/>
+                <xsd:element name="name_data" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:string"/>
+                <xsd:element name="description_data" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="SaveTestDataRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:int"/>
+                <xsd:element name="name_data" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:string"/>
+                <xsd:element name="description_data" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="SaveTestDataResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:int"/>
+                <xsd:element name="name_data" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:string"/>
+                <xsd:element name="description_data" minOccurs="1" maxOccurs="1" nillable="false" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
